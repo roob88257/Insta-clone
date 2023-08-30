@@ -15,9 +15,7 @@ const Feed=()=>{
 
 // const [isOpen,setIsOpen]=useState(false);
 
-/* useEffect(() => {
-    toast.loading("Api Key is"+process.env.NEXT_PUBLIC_API_KEY);
-}, []) */
+
 
 const {isModalOpen,user}=useContext(GlobalContext);
 
