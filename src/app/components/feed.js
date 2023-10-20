@@ -95,7 +95,7 @@ const {isModalOpen,user}=useContext(GlobalContext);
     }
                try {
                 await setDoc(postRef,post);
-                // toast.success("synced to databse");
+                toast.success("synced to databse");
                } catch (error) {
                 toast.error(error.message);
 
@@ -173,8 +173,10 @@ const {isModalOpen,user}=useContext(GlobalContext);
     })
 
 
-   console.log(posts);
+  
    }, [])
+
+   console.log(posts);
 
 return(
     <div className="w-screen h-screen bg-[#FEFEFF]">
@@ -225,14 +227,13 @@ return(
             <div className='col-span-2 flex flex-col space-y-8'>
                 <Story/>
                 {
-                posts.map((id)=>(
-                     <Post/>
+                posts.map((data)=>(
+                     <Post param={data}/>
                 ))
                 }
             </div>
             <div className='col-span-1 fixed right-[15%] max-w-sm'>
                 <div className='flex'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus feugiat in ante metus dictum at tempor commodo. Auctor neque vitae tempus quam pellentesque. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Sed arcu non odio euismod lacinia at quis risus. Arcu felis bibendum ut tristique et egestas quis. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Accumsan sit amet nulla facilisi. Tincidunt ornare massa eget egestas purus viverra. Metus vulputate eu scelerisque felis imperdiet proin. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Magna etiam tempor orci eu lobortis elementum nibh tellus.
                 </div>
             </div>
         </div>
